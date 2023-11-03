@@ -1,0 +1,34 @@
+{
+  "name": "@caz-templates/placeholder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A template for npm placeholder.",
+  "keywords": [
+    "placeholder",
+    "caz-templates",
+    "caz",
+    "zce"
+  ],
+  "repository": "caz-templates/placeholder",
+  "license": "MIT",
+  "author": "zce <w@zce.me> (https://zce.me)",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "renovate": {
+    "extends": [
+      "zce"
+    ],
+    "ignorePaths": [
+      "template"
+    ]
+  },
+  "standard": {
+    "ignore": [
+      "template"
+    ]
+  },
+  "devDependencies": {
+    "caz": "^2.0.0"
+  }
+}
