@@ -1,12 +1,7 @@
-# <%= name %>
+# <%= name %> Placeholder
 
-> <%= description %>
+This is just a placeholder.
 
-- version: <%= version %>
-- author: <%= author %>
-- email: <%= email %>
-- url: <%= url %>
-- github: <%= github %>
-- features: <%= features %>
-- year: <%= year %>
-- upper: <%= _.toUpper(name) %>
+If you like the name, get in touch :)
+
+I'll be happy to give away the name.

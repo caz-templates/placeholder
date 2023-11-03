@@ -14,7 +14,6 @@ const temp = path.join(__dirname, 'temp')
 const template = path.join(temp, 'source')
 
 fs.mkdirSync(template, { recursive: true })
-fs.cpSync(path.join(__dirname, 'index.js'), path.join(template, 'index.js'))
 fs.cpSync(path.join(__dirname, 'package.json'), path.join(template, 'package.json'))
 fs.cpSync(path.join(__dirname, 'template'), path.join(template, 'template'), { recursive: true })
 
@@ -31,49 +30,10 @@ const assertGenerated = async (input, output) => {
 const test = async () => {
   // TODO: test with different template or different answers
   await assertGenerated(
-    [
-      'minimal',
-      '0.1.0',
-      'minimal template',
-      'author',
-      'user@acme.sh',
-      'https://acme.sh',
-      'acme',
-      [],
-      false,
-      'npm'
-    ],
-    [
-      '.git',
-      'LICENSE',
-      'package.json',
-      'README.md'
-    ]
+    ['minimal'],
+    ['package.json', 'README.md']
   )
   console.info('\x1b[91m→ minimal passed\x1b[0m')
-
-  await assertGenerated(
-    [
-      'maximal',
-      '0.1.0',
-      'maximal template',
-      'author',
-      'user@acme.sh',
-      'https://acme.sh',
-      'acme',
-      [ 'foo', 'bar' ],
-      true,
-      'npm'
-    ],
-    [
-      '.git',
-      'LICENSE',
-      'package-lock.json',
-      'package.json',
-      'README.md'
-    ]
-  )
-  console.info('\x1b[91m→ maximal passed\x1b[0m')
 
   fs.rmSync(temp, { recursive: true })
 }

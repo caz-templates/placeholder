@@ -1,20 +1,10 @@
 {
   "name": "<%= name %>",
-  "version": "<%= version %>",
-  "description": "<%= description %>",
+  "version": "0.0.0",
+  "description": "Awesome node module",
   "keywords": [
     "<%= name %>",
+    "placeholder",
     "zce"
-  ],
-  "repository": "<%= github %>/<%= name %>",
-  "license": "MIT",
-  "author": "<%= author %> <<%= email %>> (<%= url %>)",
-  "scripts": {},
-  "renovate": {
-    "extends": [
-      "zce"
-    ]
-  },
-  "dependencies": {},
-  "devDependencies": {}
+  ]
 }
